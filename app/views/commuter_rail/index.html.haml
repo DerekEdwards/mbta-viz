@@ -3,14 +3,14 @@
     .col-md-2
     .col-md-8
       .well
-        .col-md-2.medium
+        .col-md-2.medium.digital
           .row
             =Time.now.strftime("%A")
           .row
             =Time.now.strftime("%m-%d-%Y")
         .col-md-8.text-center.big.headers
-          ="#{key.to_s.upcase.gsub("_"," ")} INFORMATION"
-        .col-md-2.text-right.medium
+          ="#{key.to_s.upcase.gsub("_"," ")} TRAIN INFORMATION"
+        .col-md-2.text-right.medium.digital
           .row 
             CURRENT TIME
           .row
@@ -30,18 +30,18 @@
           .col-md-2
             STATUS
         -times.each do |time|
-          .row    
+          .row.digital    
             .col-md-2
               =time[:scheduled]
             .col-md-2
               =time[:estimated]
             .col-md-4
-              =time[:destination]
+              =time[:destination].upcase
             .col-md-1
-              =time[:train]
+              =time[:train].upcase
             .col-md-1
-              =time[:track] || "TBD"
+              =(time[:track] || "TBD").upcase
             .col-md-2
-              =time[:status]
+              =time[:status].upcase
 
       
