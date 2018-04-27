@@ -1,0 +1,48 @@
+-@times.each do |key, times|
+  .row
+    .col-md-2
+    .col-md-8
+      .well
+        .col-md-2
+          .row
+            =Time.now.strftime("%A")
+          .row
+            =Time.now.strftime("%m-%d-%Y")
+        .col-md-8.text-center
+          ="#{key.to_s.upcase.gsub("_"," ")} INFORMATION"
+        .col-md-2.text-right
+          .row 
+            CURRENT TIME
+          .row
+            =Time.now.strftime("%l:%M %p")
+
+
+        .row
+          .col-md-2
+            SCHEDULED
+          .col-md-2
+            ESTIMATED
+          .col-md-4
+            DESTINATION
+          .col-md-1
+            TRAIN#
+          .col-md-1
+            TRACK#
+          .col-md-2
+            STATUS
+        -times.each do |time|
+          .row    
+            .col-md-2
+              =time[:scheduled]
+            .col-md-2
+              =time[:estimated]
+            .col-md-4
+              =time[:destination]
+            .col-md-1
+              =time[:train]
+            .col-md-1
+              =time[:track] || "TBD"
+            .col-md-2
+              =time[:status]
+
+      
