@@ -3,21 +3,20 @@
     .col-md-2
     .col-md-8
       .well
-        .col-md-2
+        .col-md-2.medium
           .row
             =Time.now.strftime("%A")
           .row
             =Time.now.strftime("%m-%d-%Y")
-        .col-md-8.text-center
+        .col-md-8.text-center.big.headers
           ="#{key.to_s.upcase.gsub("_"," ")} INFORMATION"
-        .col-md-2.text-right
+        .col-md-2.text-right.medium
           .row 
             CURRENT TIME
           .row
             =Time.now.strftime("%l:%M %p")
 
-
-        .row
+        .row.headers
           .col-md-2
             SCHEDULED
           .col-md-2
