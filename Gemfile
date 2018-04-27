@@ -8,6 +8,7 @@ end
 # Custom Gems
 gem "haml-rails", "~> 1.0"
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'jquery-rails'
 gem "font-awesome-rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
